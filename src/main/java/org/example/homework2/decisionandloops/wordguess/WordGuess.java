@@ -1,4 +1,4 @@
-package org.example.homework2.wordguess;
+package org.example.homework2.decisionandloops.wordguess;
 
 
 import org.example.homework2.utils.ReadTextFile;

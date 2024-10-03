@@ -1,4 +1,4 @@
-package org.example.homework2;
+package org.example.homework2.array;
 
 public class Matrix {
 
@@ -59,16 +59,16 @@ public class Matrix {
 
 
     public static boolean haveSameDimension(int[][] matrix1, int[][] matrix2) {
-        return false;
+        return ((matrix1.length == matrix2.length) && (matrix1[0].length == matrix2[0].length));
     }
 
     public static boolean haveSameDimension(double[][] matrix1, double[][] matrix2) {
-        return false;
+        return ((matrix1.length == matrix2.length) && (matrix1[0].length == matrix2[0].length));
     }
 
     public static int[][] add(int[][] matrix1, int[][] matrix2) {
         int[][] result = new int[matrix1.length][matrix1[0].length];
-        if (matrix1.length == matrix2.length && matrix1[0].length == matrix2[0].length) {
+        if (haveSameDimension(matrix1, matrix2)) {
             for (int row = 0; row < matrix1.length; row++) {
                 for (int col = 0; col < matrix1[0].length; col++) {
                     result[row][col] = matrix1[row][col] + matrix2[row][col];
@@ -82,7 +82,7 @@ public class Matrix {
 
     public static double[][] add(double[][] matrix1, double[][] matrix2) {
         double[][] result = new double[matrix1.length][matrix1[0].length];
-        if (matrix1.length == matrix2.length && matrix1[0].length == matrix2[0].length) {
+        if (haveSameDimension(matrix1, matrix2)) {
             for (int row = 0; row < matrix1.length; row++) {
                 for (int col = 0; col < matrix1[0].length; col++) {
                     result[row][col] = matrix1[row][col] + matrix2[row][col];
@@ -96,7 +96,7 @@ public class Matrix {
 
     public static int[][] subtract(int[][] matrix1, int[][] matrix2) {
         int[][] result = new int[matrix1.length][matrix1[0].length];
-        if (matrix1.length == matrix2.length && matrix1[0].length == matrix2[0].length) {
+        if (haveSameDimension(matrix1, matrix2)) {
             for (int row = 0; row < matrix1.length; row++) {
                 for (int col = 0; col < matrix1[0].length; col++) {
                     result[row][col] = matrix1[row][col] - matrix2[row][col];
@@ -110,7 +110,7 @@ public class Matrix {
 
     public static double[][] subtract(double[][] matrix1, double[][] matrix2) {
         double[][] result = new double[matrix1.length][matrix1[0].length];
-        if (matrix1.length == matrix2.length && matrix1[0].length == matrix2[0].length) {
+        if (haveSameDimension(matrix1, matrix2)) {
             for (int row = 0; row < matrix1.length; row++) {
                 for (int col = 0; col < matrix1[0].length; col++) {
                     result[row][col] = matrix1[row][col] - matrix2[row][col];

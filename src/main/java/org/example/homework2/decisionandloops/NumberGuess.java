@@ -1,4 +1,4 @@
-package org.example.homework2;
+package org.example.homework2.decisionandloops;
 
 import java.util.Scanner;
 

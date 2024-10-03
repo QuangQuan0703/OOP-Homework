@@ -1,4 +1,4 @@
-package org.example.homework2;
+package org.example.homework2.stringandcharoperations;
 
 import java.util.Scanner;
 

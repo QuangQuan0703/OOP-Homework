@@ -1,11 +1,13 @@
 package org.example.homework2;
 
-import org.example.homework2.wordguess.WordGuess;
+import org.example.homework2.decisionandloops.wordguess.WordGuess;
+import org.example.homework2.method.NumberSystemConversion;
+import org.example.homework2.stringandcharoperations.TestPalindromicWordAndTestPalindromicPhrase;
 
 public class HomeWork2 {
     public static void main(String[] args) {
        // NumberGuess numberGuess = new NumberGuess();
-        WordGuess wordGuess = new WordGuess();
+        //WordGuess wordGuess = new WordGuess();
        // SquarePattern squarePattern = new SquarePattern();
         //CheckerPattern checkerPattern = new CheckerPattern();
         //TimeTable timeTable = new TimeTable();
@@ -19,5 +21,7 @@ public class HomeWork2 {
         //Exponential exponential = new Exponential();
        // FactorianlInt factor = new FactorianlInt();
         //FibonacciInt fibonacciInt = new FibonacciInt();
+       // TestPalindromicWordAndTestPalindromicPhrase testPalindromicWordAndTestPalindromicPhrase = new TestPalindromicWordAndTestPalindromicPhrase();
+        NumberSystemConversion numberSystemConversion = new NumberSystemConversion();
     }
 }

@@ -11,6 +11,9 @@ public class MainLab2 {
         //BinaryToDecimal binaryToDecimal = new BinaryToDecimal();
         //HexadecimalToDecimal hexadecimalToDecimal = new HexadecimalToDecimal();
         //PrintArray printArray = new PrintArray();
-        HexadecimalToBinary hexadecimalToBinary = new HexadecimalToBinary();
+       //HexadecimalToBinary hexadecimalToBinary = new HexadecimalToBinary();
+       // GradesStatistics gradesStatistics = new GradesStatistics();
+        //DecimalToHexadecimal decimalToHexadecimal = new DecimalToHexadecimal();
+        Exponent exponent = new Exponent();
     }
 }

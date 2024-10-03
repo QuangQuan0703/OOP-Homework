@@ -9,7 +9,8 @@ public class BinaryToDecimal {
     public BinaryToDecimal() {
         testBinaryDecimal();
     }
-    void testBinaryDecimal(){
+
+    void testBinaryDecimal() {
         System.out.println("Enter a binary String: ");
         String binaryString = scanner.next();
         int binaryToDecimal = binaryToDecimal(binaryString);
@@ -19,15 +20,16 @@ public class BinaryToDecimal {
         System.out.println(printResult);
 
     }
-    int binaryToDecimal(String binary){
+
+    int binaryToDecimal(String binary) {
         int decimal = 0;
-        if(checkValid(binary)){
+        if (checkValid(binary)) {
             for (int charIndex = 0; charIndex < binary.length(); charIndex++) {
-                int numberChar = Integer.parseInt(String.valueOf(binary.charAt( binary.length() - 1 - charIndex)));
-                decimal += numberChar*Math.pow(2, charIndex);
+                int numberChar = Integer.parseInt(String.valueOf(binary.charAt(binary.length() - 1 - charIndex)));
+                decimal += numberChar * Math.pow(2, charIndex);
             }
             return decimal;
-        }else {
+        } else {
             return -1;
         }
     }
@@ -35,7 +37,7 @@ public class BinaryToDecimal {
 
     private boolean checkValid(String binary) {
         for (int charIndex = 0; charIndex < binary.length(); charIndex++) {
-            if(valid.indexOf(binary.charAt(charIndex))==-1){
+            if (valid.indexOf(binary.charAt(charIndex)) == -1) {
                 return false;
             }
         }

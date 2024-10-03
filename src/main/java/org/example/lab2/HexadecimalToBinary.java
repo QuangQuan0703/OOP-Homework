@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class HexadecimalToBinary {
-    List<String> hexToBinary = new ArrayList<>();
+    String[] hexToBinary ;
     public HexadecimalToBinary() {
         testHexadecimalToBinary(new Scanner(System.in));
     }
@@ -14,9 +14,10 @@ public class HexadecimalToBinary {
         System.out.println("Enter a hexadecimal string: ");
         String hexStr = scanner.nextLine().trim();
         String result = "";
+        hexToBinary = new String[hexStr.length()];
         for (int indexHexStr = 0; indexHexStr < hexStr.length(); indexHexStr++ ) {
-            hexToBinary.add(hexadecimalToBinary(Character.toString(hexStr.charAt(indexHexStr))));
-            result += " " + hexToBinary.get(indexHexStr) + " ";
+            hexToBinary[indexHexStr] = hexadecimalToBinary(Character.toString(hexStr.charAt(indexHexStr)));
+            result += " " + hexToBinary[indexHexStr] + " ";
         }
         String caption = "The equivalent binary for hexadecimal " + hexStr + " is : " + result;
         System.out.println(caption);
