@@ -1,5 +1,7 @@
 package org.example.lab2;
 
+import org.example.lab2.method.Exponent;
+
 public class MainLab2 {
     public static void main(String[] args) {
         //ReverseString reverseString = new ReverseString();
