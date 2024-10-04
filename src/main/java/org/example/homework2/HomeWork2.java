@@ -1,7 +1,7 @@
 package org.example.homework2;
 
 import org.example.homework2.decisionandloops.wordguess.WordGuess;
-import org.example.homework2.method.NumberSystemConversion;
+import org.example.homework2.method.*;
 import org.example.homework2.stringandcharoperations.TestPalindromicWordAndTestPalindromicPhrase;
 
 public class HomeWork2 {
@@ -19,7 +19,7 @@ public class HomeWork2 {
         //Matrix matrix = new Matrix();
         //TrigonometricsSeries trigonometricsSeries = new TrigonometricsSeries();
         //Exponential exponential = new Exponential();
-       // FactorianlInt factor = new FactorianlInt();
+       // FactorialInt factor = new FactorialInt();
         //FibonacciInt fibonacciInt = new FibonacciInt();
        // TestPalindromicWordAndTestPalindromicPhrase testPalindromicWordAndTestPalindromicPhrase = new TestPalindromicWordAndTestPalindromicPhrase();
         NumberSystemConversion numberSystemConversion = new NumberSystemConversion();

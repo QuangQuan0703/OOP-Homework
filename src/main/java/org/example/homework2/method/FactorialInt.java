@@ -2,9 +2,9 @@ package org.example.homework2.method;
 
 import java.util.Scanner;
 
-public class FactorianlInt {
+public class FactorialInt {
     static Scanner scanner = new Scanner(System.in);
-    public FactorianlInt() {
+    public FactorialInt() {
         testFactorianlInt();
     }
 
@@ -13,8 +13,7 @@ public class FactorianlInt {
         int count = 1;
         int factorianl = 0;
         while (factorianl >= 0){
-            factorianl = 0;
-            factorianl = factorianlInt( count, 1);
+            factorianl = factorialInt( count, 1);
 
             if (factorianl == -1){
                 System.out.println(caption + count + " is out range");
@@ -26,7 +25,7 @@ public class FactorianlInt {
 
     }
 
-    private int factorianlInt(int count, int num) {
+    private int factorialInt(int count, int num) {
         int factor = num;
         for (int i = 1; i <= count; i++) {
             if(Integer.MAX_VALUE/ factor > i){

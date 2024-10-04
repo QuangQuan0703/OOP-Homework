@@ -7,7 +7,7 @@ public class NumberSystemConversion {
         testNumberConversion();
     }
 
-    public void  testNumberConversion(){
+    public void testNumberConversion() {
         String numberAndRadixCaption = "Enter a number and radix: ";
         String inputRadixStr = "Enter the input radix: ";
         String outputRadixStr = "Enter the output radix: ";
@@ -22,42 +22,41 @@ public class NumberSystemConversion {
         System.out.println(numberAndRadixString + " in radix " + inputRadix + " is " + result + " in radix " + outputRadix);
     }
 
-    public static String toRadix(String in, int inRadix, int outRadix){
+    public static String toRadix(String in, int inRadix, int outRadix) {
+        int inRadixToDecimal = radixToDecimal(in, inRadix);
+        return  decimalToRadix(inRadixToDecimal, outRadix);
+
+    }
+
+    public static int radixToDecimal(String in, int inRadix) {
         int lengthInputStr = in.length();
-        int inputRadixToDecimal = 0;
-        int numberInRadix = inRadix;
+        final int NUMBER_INPUT_RADIX = inRadix;
+        int result = 0;
 
-
-        for (int i = lengthInputStr - 1; i >= 0; i--) {
-            if(i == lengthInputStr  - 1){
-                inputRadixToDecimal = inputRadixToDecimal + Character.digit(in.charAt(i), inRadix);
-            }else {
-                inputRadixToDecimal = inputRadixToDecimal  + Character.digit(in.charAt(i), inRadix)*numberInRadix;
-                numberInRadix =  numberInRadix * inRadix;
-            }
-
+        for (int i = 0; i < lengthInputStr; i++) {
+            result = result*NUMBER_INPUT_RADIX +  Character.digit(in.charAt(i), NUMBER_INPUT_RADIX);
         }
-
-        int dividend = inputRadixToDecimal;
+        return result;
+    }
+    public static String decimalToRadix(int input, int outRadix){
+        int dividend = input;
         int divisor = outRadix;
         int modulo = 0;
         int numberQuotient = Integer.MAX_VALUE;
         String outputRadixStr = "";
 
-        while (numberQuotient > 0){
+        while (numberQuotient > 0) {
             numberQuotient = dividend / divisor;
-            modulo = dividend - divisor*numberQuotient;
-            outputRadixStr += Character.forDigit(modulo, outRadix);
+            modulo = dividend - divisor * numberQuotient;
+            outputRadixStr = Character.forDigit(modulo, outRadix) + outputRadixStr;
             dividend = numberQuotient;
         }
-
-        return  reverseString(outputRadixStr);
-
+        return  outputRadixStr;
     }
 
-    static String  reverseString(String inputString ){
+    static String reverseString(String inputString) {
         String reverseStringResult = "";
-        for (int charIdx = inputString.length() - 1; charIdx >= 0; charIdx --) {
+        for (int charIdx = inputString.length() - 1; charIdx >= 0; charIdx--) {
             reverseStringResult += inputString.charAt(charIdx);
         }
         return reverseStringResult;

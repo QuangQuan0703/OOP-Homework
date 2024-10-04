@@ -21,10 +21,13 @@ public class Exponential {
 
     private double specialSeries(double x, int numTerms) {
         double result = 0;
+        double powX = x;
         for (int i = 1; i <= numTerms; i++) {
             double multi = multiply(i*2-1);
             double denominator = (2*i-1);
-            double powX = Math.pow(x, i*2-1);
+            if(i != 1){
+                powX *= Math.pow(x,2);
+            }
             result += powX*multi/denominator;
         }
         return result;
