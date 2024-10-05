@@ -22,7 +22,7 @@ public class PrintArray {
         return items;
     }
 
-    void printArray(int[] arr) {
+    public static void printArray(int[] arr) {
         String caption = "The values are: ";
         String result = "";
         for (int index = 0; index < arr.length; index++) {
